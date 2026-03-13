@@ -1,6 +1,38 @@
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+
+const menuItems = [
+  { name: "Home", path: "/" },
+  { name: "Room", path: "/room" },
+  { name: "About", path: "/about" },
+  { name: "Contact", path: "/contact" },
+];
+const themeOptions = [
+  { name: "Light", value: "light" },
+  { name: "Dark", value: "dark" },
+  { name: "Lofi", value: "lofi" },
+  { name: "Black", value: "black" },
+  { name: "Acid", value: "acid" },
+  { name: "Night", value: "night" },
+  { name: "Synthwave", value: "synthwave" },
+  { name: "Valentine", value: "valentine" },
+  { name: "Halloween", value: "halloween" },
+];
 
 const Header = () => {
+  // Initialize theme from localStorage or default
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
+
+  // Update data-theme and localStorage when theme changes
+  useEffect(() => {
+    localStorage.setItem("theme", theme);
+    document.documentElement.setAttribute("data-theme", theme);
+  }, [theme]);
+
+  const handleThemeChange = (e) => {
+    setTheme(e.target.value);
+  };
+
   return (
     <>
       <nav className="mt-4">
@@ -31,42 +63,30 @@ const Header = () => {
                 tabIndex="-1"
                 className="menu menu-sm dropdown-content bg-base-100 rounded-4xl z-1 mt-3 w-52 p-2 shadow"
               >
-                <li>
-                  <Link to="/">Home</Link>
-                </li>
-                <li>
-                  <Link to="/room">Room</Link>
-                </li>
-                <li>
-                  <Link to="/about">About</Link>
-                </li>
-                <li>
-                  <Link to="/contact">Contact</Link>
-                </li>
+                {menuItems.map((item) => (
+                  <li key={item.path}>
+                    <Link to={item.path}>{item.name}</Link>
+                  </li>
+                ))}
               </ul>
             </div>
-            <a className="btn btn-ghost text-xl rounded-4xl">BokBok</a>
+            <Link to="/" className="btn btn-ghost text-xl rounded-4xl font-bold">
+              BokBok
+            </Link>
           </div>
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1 [&>li>a]:rounded-4xl">
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li>
-                <Link to="/room">Room</Link>
-              </li>
-              <li>
-                <Link to="/about">About</Link>
-              </li>
-              <li>
-                <Link to="/contact">Contact</Link>
-              </li>
+              {menuItems.map((item) => (
+                <li key={item.path}>
+                  <Link to={item.path}>{item.name}</Link>
+                </li>
+              ))}
             </ul>
           </div>
           <div className="navbar-end">
             <div className="dropdown">
               <div tabIndex={0} role="button" className="btn m-1 rounded-4xl">
-                Theme
+                {themeOptions.find((option) => option.value === theme)?.name}
                 <svg
                   width="12px"
                   height="12px"
@@ -81,60 +101,19 @@ const Header = () => {
                 tabIndex="-1"
                 className="dropdown-content bg-base-300 rounded-box z-1 w-52 p-2 shadow-2xl [&>li>input]:rounded-4xl"
               >
-                <li>
-                  <input
-                    type="radio"
-                    name="theme-dropdown"
-                    className="theme-controller w-full btn btn-sm btn-block btn-ghost justify-start"
-                    aria-label="Default"
-                    value="default"
-                  />
-                </li>
-                <li>
-                  <input
-                    type="radio"
-                    name="theme-dropdown"
-                    className="theme-controller w-full btn btn-sm btn-block btn-ghost justify-start"
-                    aria-label="dark"
-                    value="dark"
-                  />
-                </li>
-                <li>
-                  <input
-                    type="radio"
-                    name="theme-dropdown"
-                    className="theme-controller w-full btn btn-sm btn-block btn-ghost justify-start"
-                    aria-label="Retro"
-                    value="retro"
-                  />
-                </li>
-                <li>
-                  <input
-                    type="radio"
-                    name="theme-dropdown"
-                    className="theme-controller w-full btn btn-sm btn-block btn-ghost justify-start"
-                    aria-label="Cyberpunk"
-                    value="cyberpunk"
-                  />
-                </li>
-                <li>
-                  <input
-                    type="radio"
-                    name="theme-dropdown"
-                    className="theme-controller w-full btn btn-sm btn-block btn-ghost justify-start"
-                    aria-label="Valentine"
-                    value="valentine"
-                  />
-                </li>
-                <li>
-                  <input
-                    type="radio"
-                    name="theme-dropdown"
-                    className="theme-controller w-full btn btn-sm btn-block btn-ghost justify-start"
-                    aria-label="Aqua"
-                    value="aqua"
-                  />
-                </li>
+                {themeOptions.map((option) => (
+                  <li key={option.value}>
+                    <input
+                      type="radio"
+                      name="theme-dropdown"
+                      className="theme-controller w-full btn btn-sm btn-block btn-ghost justify-start"
+                      aria-label={option.name}
+                      value={option.value}
+                      checked={theme === option.value}
+                      onChange={handleThemeChange}
+                    />
+                  </li>
+                ))}
               </ul>
             </div>
           </div>

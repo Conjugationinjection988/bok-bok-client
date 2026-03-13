@@ -1,8 +1,20 @@
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-base-100 flex flex-col items-center pb-20 rounded-4xl">
+      <Helmet>
+        <title>BokBok — Real-Time Chat Rooms</title>
+        <meta name="description" content="BokBok lets you create and join real-time, expiring chat rooms instantly. No sign-up required — just pick a name and start chatting." />
+        <link rel="canonical" href="https://bokbok.chat/" />
+        <meta property="og:title" content="BokBok — Real-Time Chat Rooms" />
+        <meta property="og:description" content="BokBok lets you create and join real-time, expiring chat rooms instantly. No sign-up required." />
+        <meta property="og:url" content="https://bokbok.chat/" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:title" content="BokBok — Real-Time Chat Rooms" />
+        <meta name="twitter:description" content="Create or join real-time, expiring chat rooms. No sign-up needed." />
+      </Helmet>
       {/* Dynamic Background Elements */}
       <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-primary/20 blur-[100px] rounded-full -z-10 pointer-events-none"></div>
       <div className="absolute top-[20%] right-[-5%] w-[30%] h-[50%] bg-secondary/20 blur-[120px] rounded-full -z-10 pointer-events-none"></div>

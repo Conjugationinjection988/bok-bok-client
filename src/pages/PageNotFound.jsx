@@ -1,8 +1,14 @@
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const PageNotFound = () => {
   return (
     <div className="min-h-screen bg-base-100 flex flex-col items-center pb-20 rounded-4xl">
+      <Helmet>
+        <title>404 Page Not Found — BokBok</title>
+        <meta name="description" content="The page you're looking for doesn't exist on BokBok." />
+        <meta name="robots" content="noindex, nofollow" />
+      </Helmet>
       {/* Dynamic Background Elements */}
       <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-primary/20 blur-[100px] rounded-full -z-10 pointer-events-none"></div>
       <div className="absolute top-[20%] right-[-5%] w-[30%] h-[50%] bg-secondary/20 blur-[120px] rounded-full -z-10 pointer-events-none"></div>

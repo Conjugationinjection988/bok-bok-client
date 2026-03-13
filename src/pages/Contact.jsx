@@ -1,6 +1,17 @@
+import { Helmet } from "react-helmet-async";
+
 export default function Contact() {
   return (
     <div className="min-h-screen bg-base-100 flex flex-col items-center pb-20 overflow-x-hidden rounded-4xl">
+      <Helmet>
+        <title>Contact — BokBok</title>
+        <meta name="description" content="Get in touch with the BokBok team. Send us a message or reach out through our community support channels." />
+        <link rel="canonical" href="https://bokbok.chat/contact" />
+        <meta property="og:title" content="Contact — BokBok" />
+        <meta property="og:description" content="Contact the BokBok team with questions, feature requests, or just to say hello." />
+        <meta property="og:url" content="https://bokbok.chat/contact" />
+        <meta name="robots" content="index, follow" />
+      </Helmet>
       {/* Dynamic Background Elements */}
       <div className="absolute top-[0%] left-[-10%] w-[50%] h-[50%] bg-primary/20 blur-[130px] rounded-full -z-10 pointer-events-none"></div>
       <div className="absolute top-[20%] right-[-5%] w-[40%] h-[60%] bg-secondary/10 blur-[150px] rounded-full -z-10 pointer-events-none"></div>

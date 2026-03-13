@@ -1,8 +1,18 @@
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 export default function About() {
   return (
     <div className="min-h-screen bg-base-100 flex flex-col items-center pb-20 rounded-4xl">
+      <Helmet>
+        <title>About — BokBok</title>
+        <meta name="description" content="Learn what BokBok is about — a frictionless, real-time public chat platform. No accounts, no barriers. Just open, expiring chat rooms." />
+        <link rel="canonical" href="https://bokbok.chat/about" />
+        <meta property="og:title" content="About — BokBok" />
+        <meta property="og:description" content="A frictionless public chat platform. No sign-up, no barriers — just conversations." />
+        <meta property="og:url" content="https://bokbok.chat/about" />
+        <meta name="robots" content="index, follow" />
+      </Helmet>
 
       {/* Dynamic Background Elements */}
       <div className="absolute top-[10%] left-[-10%] w-[40%] h-[40%] bg-primary/20 blur-[120px] rounded-full -z-10 pointer-events-none"></div>
