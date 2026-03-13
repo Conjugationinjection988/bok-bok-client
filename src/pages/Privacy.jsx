@@ -14,7 +14,7 @@ export default function PrivacyPolicy() {
       <Helmet>
         <title>Privacy Policy — BokBok</title>
         <meta name="description" content="Read BokBok's Privacy Policy to learn how we handle your data and protect your privacy on our real-time chat platform." />
-        <link rel="canonical" href="https://bokbok.chat/privacy" />
+        <link rel="canonical" href="https://bok-bok.vercel.app/privacy" />
         <meta name="robots" content="index, follow" />
       </Helmet>
 
@@ -46,7 +46,7 @@ export default function PrivacyPolicy() {
             <p>
               BokBok ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy
               explains how we collect, use, and safeguard information when you use our real-time chat
-              service at bokbok.chat.
+              service at bok-bok.vercel.app.
             </p>
           </Section>
 
@@ -144,8 +144,8 @@ export default function PrivacyPolicy() {
           <Section title="12. Contact Us">
             <p>
               If you have any questions or concerns about this Privacy Policy, please contact us at{" "}
-              <a href="mailto:hello@bokbok.chat" className="text-primary font-medium hover:underline">
-                hello@bokbok.chat
+              <a href="mailto:hello@bok-bok.vercel.app" className="text-primary font-medium hover:underline">
+                hello@bok-bok.vercel.app
               </a>
               .
             </p>

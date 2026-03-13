@@ -7,10 +7,10 @@ export default function Home() {
       <Helmet>
         <title>BokBok — Real-Time Chat Rooms</title>
         <meta name="description" content="BokBok lets you create and join real-time, expiring chat rooms instantly. No sign-up required — just pick a name and start chatting." />
-        <link rel="canonical" href="https://bokbok.chat/" />
+        <link rel="canonical" href="https://bok-bok.vercel.app/" />
         <meta property="og:title" content="BokBok — Real-Time Chat Rooms" />
         <meta property="og:description" content="BokBok lets you create and join real-time, expiring chat rooms instantly. No sign-up required." />
-        <meta property="og:url" content="https://bokbok.chat/" />
+        <meta property="og:url" content="https://bok-bok.vercel.app/" />
         <meta property="og:type" content="website" />
         <meta name="twitter:title" content="BokBok — Real-Time Chat Rooms" />
         <meta name="twitter:description" content="Create or join real-time, expiring chat rooms. No sign-up needed." />
@@ -74,7 +74,7 @@ export default function Home() {
         <div className="mockup-browser bg-base-300 border border-white/10 shadow-2xl overflow-hidden rounded-3xl">
           <div className="mockup-browser-toolbar">
             <div className="input border-white/5 opacity-50">
-              https://bokbok.chat/demo
+              https://bok-bok.vercel.app/demo
             </div>
           </div>
           <div className="flex flex-col justify-center px-4 py-8 md:py-12 bg-base-200/50 relative">

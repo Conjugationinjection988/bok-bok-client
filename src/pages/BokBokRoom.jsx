@@ -13,7 +13,7 @@ const EMOJI_LIST = [
   "🍕","🍔","🎮","🎵","🚀","⚽","🌙","☀️","🌈","🐶",
 ];
 
-const SOCKET_URL = process.meta.env.VITE_SOCKET_URL;
+const SOCKET_URL = import.meta.env.VITE_SOCKET_URL;
 const TYPING_TIMEOUT = 2000;
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────

@@ -67,14 +67,14 @@ const Room = () => {
     const form = e.target;
     const roomId = form.room_id.value.trim();
     const inputName = form.name?.value?.trim() || "";
-    
+
     try {
       setJoining(true);
       await getRoomById(roomId);
-      
+
       const storedName = getStoredName(roomId);
       const finalName = inputName || storedName;
-      
+
       if (!finalName) {
         setJoinError("A name is required for new rooms.");
         return;
@@ -119,10 +119,10 @@ const Room = () => {
       <Helmet>
         <title>Rooms — BokBok</title>
         <meta name="description" content="Browse public BokBok chat rooms or create your own. Join a room instantly with just a name — no account required." />
-        <link rel="canonical" href="https://bokbok.chat/room" />
+        <link rel="canonical" href="https://bok-bok.vercel.app/room" />
         <meta property="og:title" content="Chat Rooms — BokBok" />
         <meta property="og:description" content="Create or join real-time chat rooms on BokBok. No sign-up needed." />
-        <meta property="og:url" content="https://bokbok.chat/room" />
+        <meta property="og:url" content="https://bok-bok.vercel.app/room" />
         <meta name="robots" content="index, follow" />
       </Helmet>
       {/* Dynamic Background Elements */}

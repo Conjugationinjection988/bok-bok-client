@@ -7,10 +7,10 @@ export default function About() {
       <Helmet>
         <title>About — BokBok</title>
         <meta name="description" content="Learn what BokBok is about — a frictionless, real-time public chat platform. No accounts, no barriers. Just open, expiring chat rooms." />
-        <link rel="canonical" href="https://bokbok.chat/about" />
+        <link rel="canonical" href="https://bok-bok.vercel.app/about" />
         <meta property="og:title" content="About — BokBok" />
         <meta property="og:description" content="A frictionless public chat platform. No sign-up, no barriers — just conversations." />
-        <meta property="og:url" content="https://bokbok.chat/about" />
+        <meta property="og:url" content="https://bok-bok.vercel.app/about" />
         <meta name="robots" content="index, follow" />
       </Helmet>
 

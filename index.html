@@ -1,49 +1,54 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Blocking theme script: runs before React to avoid flash of wrong theme -->
-    <script>
-      (function() {
-        try {
-          var t = localStorage.getItem("theme") || "light";
-          document.documentElement.setAttribute("data-theme", t);
-        } catch(e) {
-          document.documentElement.setAttribute("data-theme", "light");
-        }
-      })();
-    </script>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/*" href="/logo.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Primary SEO -->
-    <title>BokBok — Real-Time Chat Rooms</title>
-    <meta name="description" content="BokBok lets you create and join real-time, expiring chat rooms instantly. No sign-up required — just pick a name and start chatting." />
-    <meta name="keywords" content="chat, real-time chat, anonymous chat, chat rooms, BokBok, messaging" />
-    <meta name="author" content="BokBok" />
-    <meta name="robots" content="index, follow" />
+<head>
+  <!-- Blocking theme script: runs before React to avoid flash of wrong theme -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("theme") || "light";
+        document.documentElement.setAttribute("data-theme", t);
+      } catch (e) {
+        document.documentElement.setAttribute("data-theme", "light");
+      }
+    })();
+  </script>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/*" href="/logo.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://bokbok.chat/" />
-    <meta property="og:title" content="BokBok — Real-Time Chat Rooms" />
-    <meta property="og:description" content="Create or join expiring, anonymous real-time chat rooms. No account needed." />
-    <meta property="og:image" content="https://bokbok.chat/og-image.png" />
+  <!-- Primary SEO -->
+  <title>BokBok — Real-Time Chat Rooms</title>
+  <meta name="description"
+    content="BokBok lets you create and join real-time, expiring chat rooms instantly. No sign-up required — just pick a name and start chatting." />
+  <meta name="keywords" content="chat, real-time chat, anonymous chat, chat rooms, BokBok, messaging" />
+  <meta name="author" content="BokBok" />
+  <meta name="robots" content="index, follow" />
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="https://bokbok.chat/" />
-    <meta name="twitter:title" content="BokBok — Real-Time Chat Rooms" />
-    <meta name="twitter:description" content="Create or join expiring, anonymous real-time chat rooms. No account needed." />
-    <meta name="twitter:image" content="https://bokbok.chat/og-image.png" />
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://bok-bok.vercel.app/" />
+  <meta property="og:title" content="BokBok — Real-Time Chat Rooms" />
+  <meta property="og:description"
+    content="Create or join expiring, anonymous real-time chat rooms. No account needed." />
+  <meta property="og:image" content="https://bok-bok.vercel.app/og-image.png" />
 
-    <!-- Theme -->
-    <meta name="theme-color" content="#6d28d9" />
-    <meta name="color-scheme" content="light dark" />
-  </head>
-  <body class="overflow-x-hidden">
-    <div id="root" class="container mx-auto"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://bok-bok.vercel.app/" />
+  <meta name="twitter:title" content="BokBok — Real-Time Chat Rooms" />
+  <meta name="twitter:description"
+    content="Create or join expiring, anonymous real-time chat rooms. No account needed." />
+  <meta name="twitter:image" content="https://bok-bok.vercel.app/og-image.png" />
+
+  <!-- Theme -->
+  <meta name="theme-color" content="#6d28d9" />
+  <meta name="color-scheme" content="light dark" />
+</head>
+
+<body class="overflow-x-hidden">
+  <div id="root" class="container mx-auto"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
 </html>
-

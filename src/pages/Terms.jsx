@@ -14,7 +14,7 @@ export default function TermsAndConditions() {
       <Helmet>
         <title>Terms & Conditions — BokBok</title>
         <meta name="description" content="Read BokBok's Terms and Conditions to understand the rules governing your use of our real-time chat platform." />
-        <link rel="canonical" href="https://bokbok.chat/terms" />
+        <link rel="canonical" href="https://bok-bok.vercel.app/terms" />
         <meta name="robots" content="index, follow" />
       </Helmet>
 
@@ -122,8 +122,8 @@ export default function TermsAndConditions() {
           <Section title="10. Contact">
             <p>
               If you have any questions about these Terms, please contact us at{" "}
-              <a href="mailto:hello@bokbok.chat" className="text-primary font-medium hover:underline">
-                hello@bokbok.chat
+              <a href="mailto:hello@bok-bok.vercel.app" className="text-primary font-medium hover:underline">
+                hello@bok-bok.vercel.app
               </a>
               .
             </p>

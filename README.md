@@ -92,8 +92,8 @@ npm run preview   # preview the production build locally
 
 | Variable | Description |
 |---|---|
-| `VITE_BACKEND_URL` | Base URL for the REST API (e.g. `https://api.bokbok.chat/api`) |
-| `VITE_SOCKET_URL` | WebSocket server URL (e.g. `https://api.bokbok.chat`) |
+| `VITE_BACKEND_URL` | Base URL for the REST API (e.g. `https://api.bok-bok.vercel.app/api`) |
+| `VITE_SOCKET_URL` | WebSocket server URL (e.g. `https://api.bok-bok.vercel.app`) |
 
 ---
 

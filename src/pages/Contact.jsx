@@ -6,10 +6,10 @@ export default function Contact() {
       <Helmet>
         <title>Contact — BokBok</title>
         <meta name="description" content="Get in touch with the BokBok team. Send us a message or reach out through our community support channels." />
-        <link rel="canonical" href="https://bokbok.chat/contact" />
+        <link rel="canonical" href="https://bok-bok.vercel.app/contact" />
         <meta property="og:title" content="Contact — BokBok" />
         <meta property="og:description" content="Contact the BokBok team with questions, feature requests, or just to say hello." />
-        <meta property="og:url" content="https://bokbok.chat/contact" />
+        <meta property="og:url" content="https://bok-bok.vercel.app/contact" />
         <meta name="robots" content="index, follow" />
       </Helmet>
       {/* Dynamic Background Elements */}
@@ -55,10 +55,10 @@ export default function Contact() {
                 <div>
                   <h3 className="text-xl font-bold mb-1">Email Us</h3>
                   <a
-                    href="mailto:hello@bokbok.chat"
+                    href="mailto:hello@bok-bok.vercel.app"
                     className="text-base-content/70 hover:text-primary transition-colors"
                   >
-                    hello@bokbok.chat
+                    hello@bok-bok.vercel.app
                   </a>
                 </div>
               </div>
